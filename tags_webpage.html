@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessible Clothing Tags</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #4f8a8b;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #4f8a8b;
+    }
+    .tag {
+      border: 2px dashed #4f8a8b;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      background-color: #eaf4f4;
+      border-radius: 8px;
+      line-height: 1.6;
+    }
+    .braille {
+      font-family: "Arial", sans-serif;
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
+      color: #000;
+    }
+    .visually-hidden {
+      position: absolute !important;
+      height: 1px; width: 1px;
+      overflow: hidden;
+      clip: rect(1px, 1px, 1px, 1px);
+      white-space: nowrap;
+    }
+    .print-note {
+      font-size: 0.9rem;
+      color: #777;
+      margin-top: 2rem;
+    }
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      main, main * {
+        visibility: visible;
+      }
+      main {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header role="banner">
+    <h1>Accessible Clothing Tags</h1>
+    <p>Created by Fatihatul Tahrat for the VIP Creative Accessibility in Design</p>
+  </header>
+
+  <main role="main">
+    <h2>Printable Tags</h2>
+
+    <section class="tag" aria-labelledby="tag1-label">
+      <span id="tag1-label" class="visually-hidden">Tag: Size Medium. Wash Cold. Do Not Bleach.</span>
+      <div aria-hidden="true">
+        Size: Medium<br>
+        Wash: Cold<br>
+        Bleach: Do Not Bleach
+      </div>
+      <div class="braille" aria-hidden="true">
+        ⠎⠊⠵⠑ ⠍⠑⠙⠊⠥⠍ ⠺⠁⠎⠓ ⠉⠕⠇⠙ ⠙⠕ ⠝⠕⠞ ⠃⠇⠑⠁⠉⠓
+      </div>
+    </section>
+
+    <section class="tag" aria-labelledby="tag2-label">
+      <span id="tag2-label" class="visually-hidden">Tag: Size Large. Machine Wash Warm. Tumble Dry Low.</span>
+      <div aria-hidden="true">
+        Size: Large<br>
+        Wash: Machine Wash Warm<br>
+        Dry: Tumble Dry Low
+      </div>
+      <div class="braille" aria-hidden="true">
+        ⠎⠊⠵⠑ ⠇⠁⠗⠛⠑ ⠍⠁⠉⠓⠊⠝⠑ ⠺⠁⠎⠓ ⠺⠁⠗⠍ ⠞⠥⠍⠃⠇⠑ ⠙⠗⠽ ⠇⠕⠺
+      </div>
+    </section>
+
+    <section class="tag" aria-labelledby="tag3-label">
+      <span id="tag3-label" class="visually-hidden">Tag: Size Small. Hand Wash Only. Air Dry.</span>
+      <div aria-hidden="true">
+        Size: Small<br>
+        Wash: Hand Wash Only<br>
+        Dry: Air Dry
+      </div>
+      <div class="braille" aria-hidden="true">
+        ⠎⠊⠵⠑ ⠎⠍⠁⠇⠇ ⠓⠁⠝⠙ ⠺⠁⠎⠓ ⠕⠝⠇⠽ ⠁⠊⠗ ⠙⠗⠽
+      </div>
+    </section>
+
+    <p class="print-note">Tip: Press <strong>Ctrl+P</strong> (or Command+P on Mac) to print these tags.</p>
+  </main>
+</body>
+</html>
